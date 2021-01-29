@@ -31,7 +31,7 @@ class Weather {
                 </div>
             </div>
             <div class="weather-icon">
-                <img src="http://openweathermap.org/img/w/${this.icon}.png" alt="">
+                <img src="https://openweathermap.org/img/w/${this.icon}.png" alt="">
             </div>
         `
         var weatherBlockDel = document.querySelector(".weather");
@@ -45,7 +45,7 @@ class Weather {
 }
 
 getWeatherBtn.addEventListener("click", function() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&units=metric&APPID=5d066958a60d315387d9492393935c19`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&units=metric&APPID=5d066958a60d315387d9492393935c19`)
     .then(response => response.json())
     .then(data => {
         new Weather (
